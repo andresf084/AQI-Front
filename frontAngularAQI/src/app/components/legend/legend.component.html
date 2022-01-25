@@ -1,0 +1,37 @@
+<div class="scaleTable">
+    <p>La siguiente tabla define la escala del índice de calidad del aire según lo define el estándar US-EPA 2016:</p>
+    <table class="table table-bordered" id="legendtable">
+        <thead class="tHeader">
+            <tr>
+                <th>ICA</th>
+                <TH>Nivel de contaminación del aire</TH>
+            </tr>
+        </thead>
+        <tbody *ngIf="ica && ica.length>0">
+            <tr>
+                <th scope="row" class="good">0 - 50</th>
+                <td class="good">Bien</td>
+              </tr>
+              <tr>
+                <th scope="row" class="moderate">51 - 100</th>
+                <td class="moderate">Moderado</td>
+              </tr>
+              <tr>
+                <th scope="row" class="unhealthySens">101- 150</th>
+                <td class="unhealthySens">Insalubre para grupos sensibles</td>
+              </tr>
+              <tr>
+                <th scope="row" class="unhealthy">151- 200</th>
+                <td class="unhealthy">Insalubre</td>
+              </tr>
+              <tr>
+                <th scope="row" class="veryUnhealthy">201- 300</th>
+                <td class="veryUnhealthy">Muy poco saludable</td>
+              </tr>
+              <tr>
+                <th scope="row" class="hazardous">300+</th>
+                <td class="hazardous">Peligroso</td>
+              </tr>
+        </tbody>
+    </table>
+</div>

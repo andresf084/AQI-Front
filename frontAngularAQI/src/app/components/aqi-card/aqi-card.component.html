@@ -1,0 +1,31 @@
+<h2>ESTACIONES A COMPARAR</h2>
+<div class="card">
+    <select class="stationList" #mySelect (change)='onOptionsSelected(mySelect.value)' required placeholder="d.ff">
+        <option hidden value="" disabled selected>Seleccione una estación </option>
+        <option class='option' *ngFor="let item of stationDataMaster" [value]="item.name">{{item.name}}</option>
+    </select>
+    <br>
+    <div>
+        <table class="table table-bordered">
+            <thead class="tHeader">
+                <tr>
+                    <th>ÍNDICE DE CALIDAD DEL AIRE (AQI)</th>
+                    <TH>FECHA Y HORA DE LA ÚLTIMA ACTUALIZACIÓN</TH>
+                </tr>
+            </thead>
+            <tbody *ngIf="stationDataMaster && stationDataMaster.length>0">
+                <tr>
+                    <td scope="row" id="aqiCell" [ngClass]="{
+                        'good': _aqi <= 50,
+                        'moderate': _aqi > 50 && _aqi <= 100,
+                        'unhealthySens': _aqi > 100 && _aqi <= 150,
+                        'unhealthy': _aqi > 150 && _aqi <= 200,
+                        'veryUnhealthy': _aqi > 200 && _aqi <= 300,
+                        'hazardous': _aqi > 300
+                    }" >{{_aqi}}</td>
+                    <td>{{_time}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

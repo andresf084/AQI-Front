@@ -1,0 +1,24 @@
+<div class="header">
+    <h1>INDICE DE CALIDAD DEL AIRE</h1>
+    <br>
+    <h3>Bienvenido a la página creada para consultar el índice de calidad del aire de las estaciones de la ciudad de Bogotá, aquí podrá consultar dos estaciones de forma simultánea.</h3>
+    <br>
+    <h3>Presione el siguiente botón para actualizar la información:</h3>
+    <br>
+    <button class="btn btn-success" type="submit" (click)="updateStationsInfo()">ACTUALIZAR</button>
+    <br>
+</div>
+
+<div class="content">
+    <br>
+    <div>
+        <app-aqi-card></app-aqi-card>
+    </div>
+    <br>
+    <div>
+        <app-aqi-card></app-aqi-card>
+    </div>
+</div>
+<div>
+    <app-legend></app-legend>
+</div>

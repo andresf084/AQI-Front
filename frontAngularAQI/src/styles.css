@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: rgb(254,254,254);
+    background: linear-gradient(90deg, rgba(254,254,254,1) 20%, rgba(97, 140, 221, 0.835) 100%);
+}
+
+.content {
+    width: 50%;
+    float: left;
+    margin-left: 10px;
+}
+
+.tHeader {
+    background: lightslategray;
+    color: white;
+}
+
+.scaleTable {
+    width: 25%;
+    float: right;
+    margin-right: 100px;
+}
+
+.header {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border-color: black;
+    border-style: solid;
+    width: 50%;
+}
+
+/*Clases para las escalas de AQI de acuerdo con el índice obtenido*/
+.good {
+    background-color: #009966;
+    color: white;
+}
+
+.moderate {
+    background-color: #FFDE33;
+}
+
+.unhealthySens {
+    background-color: #FF9933;
+}
+
+.unhealthy {
+    background-color: #CC0033;
+    color: white;
+}
+
+.veryUnhealthy {
+    background-color: #660099;
+    color: white;
+}
+
+.hazardous {
+    background-color: #7E0023;
+    color: white;
+}
